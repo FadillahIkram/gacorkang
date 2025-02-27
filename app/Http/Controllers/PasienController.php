@@ -19,11 +19,18 @@ class PasienController extends Controller
         return view('patients.create');
     }
 
+    public function show($id)
+    {
+        $patient = Pasien::findOrFail($id);
+        return view('patients.show', compact('patient'));
+    }
+
     public function store(Request $request)
     {
         $request->validate([
             'name' => 'required',
             'age' => 'required|integer',
+            'address' => 'required',
         ]);
 
         Pasien::create($request->all());
@@ -40,6 +47,7 @@ class PasienController extends Controller
         $request->validate([
             'name' => 'required',
             'age' => 'required|integer',
+            'address' => 'required',
         ]);
 
         $patient->update($request->all());

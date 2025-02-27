@@ -12,12 +12,14 @@
 <body>
     <!-- Navbar atau Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="{{ url('/') }}">Laravel App</a>
+        <a class="navbar-brand" href="{{ url('/') }}">RS Sigura</a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('patients.index') }}">Patients</a>
                 </li>
+                    <a class="nav-link" href="{{ route('medis.index') }}">Rekam Medis</a>
+                    <a class="nav-link" href="{{ route('medicines.index') }}">Medicine</a>
                 <!-- Tambahkan item navigasi lainnya di sini -->
             </ul>
         </div>
